@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "mock": "node ./mock/index.js",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +16,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@apollo/server": "^4.6.0",
+    "@faker-js/faker": "^7.6.0",
+    "@graphql-tools/mock": "^8.7.19",
+    "@graphql-tools/schema": "^9.0.17",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
