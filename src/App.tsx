@@ -9,7 +9,8 @@ import { FIND, UPDATE } from './graphql/demo';
 import { 
   Form,
   Input,
-  Button
+  Button,
+  Calendar
  } from 'antd-mobile';
 
 const App = () => {
@@ -36,6 +37,10 @@ const App = () => {
   return <div>
     <p> data: {JSON.stringify(data)}</p>
     <p>loading: {`${loading}`}</p>
+
+    <Calendar 
+      selectionMode='single'
+    />
 
     <Form
       layout="horizontal"
