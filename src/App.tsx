@@ -3,7 +3,8 @@
  * @Author: Bruce
  * @Description: 
  */
-import './App.css';
+import styles from './App.module.less';
+import './theme.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { FIND, UPDATE } from './graphql/demo';
 import { 
@@ -35,7 +36,7 @@ const App = () => {
     })
   }
 
-  return <div>
+  return <div className={styles.container}>
 
     <ImageUploader 
       upload={uploadHandler}
