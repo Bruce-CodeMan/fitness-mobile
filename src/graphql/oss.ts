@@ -7,6 +7,9 @@ query getOSSInfo{
         accessId
         signature
         policy
+        host
     }
 }
 `
+
+

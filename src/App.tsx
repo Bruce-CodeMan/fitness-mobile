@@ -10,11 +10,12 @@ import {
   Form,
   Input,
   Button,
-  Calendar
+  ImageUploader
  } from 'antd-mobile';
+import { useUploadOSS } from './hooks/useUploadOSS';
 
 const App = () => {
-
+  const uploadHandler = useUploadOSS();
   const {loading, data} = useQuery(FIND, {
     variables: {
       id: '9becbed5-6474-452c-a277-b59784714a68'
@@ -35,11 +36,9 @@ const App = () => {
   }
 
   return <div>
-    <p> data: {JSON.stringify(data)}</p>
-    <p>loading: {`${loading}`}</p>
 
-    <Calendar 
-      selectionMode='single'
+    <ImageUploader 
+      upload={uploadHandler}
     />
 
     <Form
